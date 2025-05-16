@@ -1,0 +1,18 @@
+For this Project , 
+the libraries which require are OpenCV, OCR- to extract the txt, 
+Mediapipe to detect the eye movement, we need to get match eye position to OCR text Line, 
+PYTTSX3 for text-to-speech and add cooldown timer to avoid re-reading the same line. Also,
+add calibration step to improve eye-tracking accuracy. OCR LIB (pytesseract).
+
+text_focus_reader/
+│
+├── main.py                # Starts the app, runs the loop
+├── camera.py              # Webcam capture logic
+├── ocr_processor.py       # OCR using pytesseract
+├── gaze_tracker.py        # Eye tracking using mediapipe
+├── focus_detector.py      # Maps gaze to OCR lines
+├── highlighter.py         # Frame annotations + line highlighting
+├── tts_engine.py          # Text-to-speech system
+├── config.py              # Config settings (TTS speed, delays, etc.)
+└── utils.py               # Helper functions
+
