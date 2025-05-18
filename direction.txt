@@ -9,7 +9,7 @@ text_focus_reader/
 ├── main.py                # Starts the app, runs the loop
 ├── camera.py              # Webcam capture logic
 ├── ocr_processor.py       # OCR using pytesseract
-├── gaze_tracker.py        # Eye tracking using mediapipe
+├── gaze_tracker.py        # Eye tracking using CVZONE which is mediapipe wrapper
 ├── focus_detector.py      # Maps gaze to OCR lines
 ├── highlighter.py         # Frame annotations + line highlighting
 ├── tts_engine.py          # Text-to-speech system
