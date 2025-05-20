@@ -54,8 +54,8 @@ def eye_gazer():
                 "center":face[473]
             }
 
-            cv2.circle(frame, left_eye['center'], 3, (255, 0, 255), cv2.FILLED)
-            cv2.circle(frame, right_eye['center'], 3, (255, 0, 255), cv2.FILLED)
+            cv2.circle(frame, left_eye['center'], 0.5, (255, 0, 255), cv2.FILLED)
+            cv2.circle(frame, right_eye['center'], 0.5, (255, 0, 255), cv2.FILLED)
             
             left_direction = directions(left_eye)
             right_direction = directions(right_eye)
