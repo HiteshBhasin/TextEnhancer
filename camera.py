@@ -3,6 +3,7 @@ from ocr_processor import ocr_core
 import numpy as np # this is to make the box inside the capture.
 import os
 from AutoScroll import AutoScroll
+from gaze_tracker import eye_gazer
 
 def videoCapturing():
     videoCapture = capture.VideoCapture(0)
