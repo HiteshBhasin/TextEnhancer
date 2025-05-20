@@ -61,10 +61,9 @@ def eye_gazer():
             right_direction = directions(right_eye)
             
             cv2.imshow("Eye Gazer", frame)
-                
-            # cv2.imshow("Image", frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
+            return left_direction, right_direction
             
     videoframe.release()
     cv2.destroyAllWindows()
