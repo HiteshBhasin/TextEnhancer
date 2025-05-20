@@ -9,9 +9,9 @@ def videoCapturing():
     videoCapture = capture.VideoCapture(0)
     if (videoCapture.isOpened()==False):
         print("error!")
-    
-    start_point = (50,100)
-    end_point = (600,200)
+    # eye gazer will come here from start_point which is left and end point which is right. 
+    start_point = (50,100) # so start from left to right and will create a box .  
+    end_point = (600,200) # whatever is with in the box will be read out loud. 
     color = (0,255,0)
     thickness= 2
     if not os.path.exists('Document.txt'):
@@ -19,7 +19,7 @@ def videoCapturing():
     
     file = open('Document.txt','a')
     while videoCapture.isOpened():
-  
+        
         x1 ,y1 = start_point
         x2,y2 = end_point
         ret, frame = videoCapture.read()
