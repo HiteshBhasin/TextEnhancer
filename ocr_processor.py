@@ -6,7 +6,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesse
 
 
 # converting the image into grescale
-img = cv2.imread('textImage.png')
+
 
 
 def greyColor(img):
@@ -46,4 +46,5 @@ def ocr_core(img):
     text = pytesseract.image_to_string(img)
     return text
 
-
+img = cv2.imread('textImage.png')
+print(ocr_core(img))
