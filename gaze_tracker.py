@@ -3,8 +3,6 @@ import dlib
 
 face_detection = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-
-print(predictor)
 def eye_gazer(camera):
 
     videoframe = camera.VideoCapture(0)
@@ -18,10 +16,12 @@ def eye_gazer(camera):
          
             for face in faces:
                 landmark = predictor(gray,face) 
-                left_x = landmark.part().x
-                left_y = landmark.part(39).y
-                cv2.rectangle(frame,(left_x,left_y),3, (255,0,0),3)
-                print(left_x,left_y)
+                left_x = landmark.part(41).x
+                left_y = landmark.part(36).y
+                right_x = landmark.part(46).x
+                right_y = landmark.part(45).y
+                return left_x,left_y, right_x, right_y
+                
                 
             camera.imshow("frame", frame)  
         if camera.waitKey(1) & 0xFF == ord('q'):
@@ -30,5 +30,5 @@ def eye_gazer(camera):
             
     videoframe.release()
     cv2.destroyAllWindows()
-eye_gazer(cv2)
+print(eye_gazer(cv2))
 #  still need to return the directions and relate it to rectangle
