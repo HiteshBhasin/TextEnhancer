@@ -1,5 +1,6 @@
 import cv2
 import pytesseract
+from gaze_tracker import eye_gazer
 # the statement below is important for tesseract engine to run.
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
