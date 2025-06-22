@@ -29,8 +29,7 @@ import cv2
 import pytesseract
 
 # Set Tesseract path if needed
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
+## (pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe')
 def ocr_core(img):
     text = pytesseract.image_to_string(img)
     return text.strip()
